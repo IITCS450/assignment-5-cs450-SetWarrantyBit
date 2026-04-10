@@ -5,3 +5,6 @@ void thread_init(void);
 tid_t thread_create(void (*fn)(void*), void *arg);
 void thread_yield(void);
 int thread_join(tid_t tid);
+
+struct context;
+void uswtch(struct context **old, struct context *new);
